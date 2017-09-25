@@ -7,6 +7,8 @@
 Simple full screen image viewer with iMessage like animation
 
 ## Preview
+<img src="https://github.com/jgchoi/JGCImageViewController/blob/master/ResourceForReadMe/2017-09-25%2018_28_50.gif" height="527">
+
 
 ## Example
 It comes with UIViewController extension that allows you to call image present function from UIViewController context.
