@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JGCImageViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PlL-5b-YQu">
+                                <rect key="frame" x="112" y="414" width="150" height="150"/>
+                                <state key="normal" image="cute"/>
+                                <connections>
+                                    <action selector="fromImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qw0-EV-MMP"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cute" translatesAutoresizingMaskIntoConstraints="NO" id="8sL-iv-hSM">
+                                <rect key="frame" x="67" y="176" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uB-dY-rO0">
+                                <rect key="frame" x="62" y="318" width="251" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BF3-VT-ynu"/>
+                                </constraints>
+                                <state key="normal" title="Using Text Button from UIImageView"/>
+                                <connections>
+                                    <action selector="fromImageView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AlN-AN-JE9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From button with image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VU2-eU-JOu">
+                                <rect key="frame" x="96" y="572" width="182" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="LoE-IR-5Tk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnC-jp-wPc">
+                                <rect key="frame" x="128" y="71" width="118" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fdh-bM-6oO"/>
+                                </constraints>
+                                <state key="normal" title="From Text Button"/>
+                                <connections>
+                                    <action selector="fromTextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DtG-tv-b2y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4uB-dY-rO0" firstAttribute="top" secondItem="8sL-iv-hSM" secondAttribute="bottom" constant="14" id="1z8-l2-dWl"/>
+                            <constraint firstItem="4uB-dY-rO0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2YH-FD-30E"/>
+                            <constraint firstItem="gnC-jp-wPc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="3OA-7u-7hU"/>
+                            <constraint firstItem="8sL-iv-hSM" firstAttribute="top" secondItem="gnC-jp-wPc" secondAttribute="bottom" constant="75" id="7om-AC-W9h"/>
+                            <constraint firstItem="PlL-5b-YQu" firstAttribute="centerX" secondItem="VU2-eU-JOu" secondAttribute="centerX" id="F7w-YX-Ua9"/>
+                            <constraint firstItem="gnC-jp-wPc" firstAttribute="centerX" secondItem="8sL-iv-hSM" secondAttribute="centerX" id="N3Y-8G-jzV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VU2-eU-JOu" secondAttribute="bottom" constant="74" id="PEn-iG-wqX"/>
+                            <constraint firstItem="PlL-5b-YQu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="112" id="Q7j-DP-320"/>
+                            <constraint firstItem="8sL-iv-hSM" firstAttribute="centerX" secondItem="4uB-dY-rO0" secondAttribute="centerX" id="RFj-yb-S0H"/>
+                            <constraint firstItem="8sL-iv-hSM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="bC9-Le-PYB"/>
+                            <constraint firstItem="gnC-jp-wPc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jP7-ms-hzm"/>
+                            <constraint firstItem="PlL-5b-YQu" firstAttribute="top" secondItem="4uB-dY-rO0" secondAttribute="bottom" constant="66" id="qVF-Z5-cjy"/>
+                            <constraint firstItem="4uB-dY-rO0" firstAttribute="centerX" secondItem="PlL-5b-YQu" secondAttribute="centerX" id="vSt-FH-LE5"/>
+                            <constraint firstItem="VU2-eU-JOu" firstAttribute="top" secondItem="PlL-5b-YQu" secondAttribute="bottom" constant="8" symbolic="YES" id="y68-na-sl0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageButton" destination="PlL-5b-YQu" id="uyI-tI-j8T"/>
+                        <outlet property="imageView" destination="8sL-iv-hSM" id="DnJ-bx-QpU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cute" width="2560" height="1600"/>
+    </resources>
+</document>
