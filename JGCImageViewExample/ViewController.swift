@@ -21,7 +21,9 @@ class ViewController: UIViewController {
     
     @IBAction func fromImageButton(_ sender: UIButton)
     {
-        present((sender.imageView?.image!)!, from: sender)
+        present((sender.imageView?.image!)!,
+                from: sender,
+                backgroundColor:UIColor.red )
     }
     
 }

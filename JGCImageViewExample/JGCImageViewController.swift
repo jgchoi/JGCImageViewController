@@ -34,12 +34,18 @@ extension UIViewController {
     }
     
     func present(_ image: UIImage, from initialView: UIView) {
+        present(image, from:initialView, backgroundColor:UIColor.black)
+    }
+    
+    func present(_ image: UIImage, from initialView: UIView, backgroundColor:UIColor) {
         let vc = JGCImageViewController()
+        vc.bgColor = backgroundColor
+        
         let imageView = UIImageView(frame: initialView.frame)
         let backgroundView = UIView(frame: view.frame)
         
         vc.view.frame = view.frame
-        backgroundView.backgroundColor = .black
+        backgroundView.backgroundColor = backgroundColor
         backgroundView.alpha = 0
         
         imageView.image = image
@@ -66,8 +72,9 @@ extension UIViewController {
             })
             
         }
-        
     }
+    
+    
 }
 
 class JGCImageViewController: UIViewController {
@@ -76,6 +83,9 @@ class JGCImageViewController: UIViewController {
             setScrollView()
         }
     }
+    var bgColor = UIColor.black
+    var bgAlpha:CGFloat = 1.0
+    
     var imageView: UIImageView!
     var isButtonVisiable = false
     var closeButton = UIButton(frame: CGRect(x: 16, y: 32, width: 50, height: 44))
@@ -92,7 +102,6 @@ class JGCImageViewController: UIViewController {
         closeButton.setTitle("Close", for: .normal)
         closeButton.setTitleColor(.white, for: .normal)
         closeButton.setTitleColor(.lightGray, for: .highlighted)
-        closeButton.alpha = 0.0
         closeButton.addTarget(self, action: #selector(didTabCloseButton), for: .touchUpInside)
         view.addSubview(closeButton)
         
@@ -109,7 +118,7 @@ class JGCImageViewController: UIViewController {
         scrollView.alwaysBounceHorizontal = false
         scrollView.showsVerticalScrollIndicator = true
         scrollView.flashScrollIndicators()
-        scrollView.backgroundColor = .black
+        scrollView.backgroundColor = self.bgColor
         scrollView.minimumZoomScale = 1.0
         scrollView.maximumZoomScale = 10.0
         scrollView.delegate = self
