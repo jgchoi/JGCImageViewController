@@ -25,6 +25,10 @@ present(image, from: view)
 
 See example project for working sample
 
+## Updates
+### Oct, 20, 2017
+* Added optional background parameters
+
 ## Installation
 Simply drag and drop the JGCImageViewController.swift to your XCode project
 
