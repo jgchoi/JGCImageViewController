@@ -33,11 +33,7 @@ extension UIViewController {
         present(vc, animated: true, completion: nil)
     }
     
-    func present(_ image: UIImage, from initialView: UIView) {
-        present(image, from:initialView, backgroundColor:UIColor.black)
-    }
-    
-    func present(_ image: UIImage, from initialView: UIView, backgroundColor:UIColor) {
+    func present(_ image: UIImage, from initialView: UIView, backgroundColor:UIColor = .black) {
         let vc = JGCImageViewController()
         vc.bgColor = backgroundColor
         

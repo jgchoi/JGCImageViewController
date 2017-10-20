@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     {
         present((sender.imageView?.image!)!,
                 from: sender,
-                backgroundColor:UIColor.red )
+                backgroundColor:UIColor.red ) // Optional background color
     }
     
 }
